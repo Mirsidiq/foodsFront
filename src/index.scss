@@ -1,0 +1,58 @@
+/* font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+@import "./variables/variables.scss";
+@font-face {
+  font-family: 'Cera Round Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../src/assets/fonts/Fontspring-DEMO-ceraroundpro-bold.otf')
+}
+@font-face {
+  font-family: 'Cera Round Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../src/assets/fonts/Fontspring-DEMO-ceraroundpro-medium.otf')
+}
+@font-face {
+  font-family: 'Cera Round Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/fonts/Fontspring-DEMO-ceraroundpro-regular.otf')
+}
+@font-face {
+  font-family: 'Cera Round Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../src/assets/fonts/Fontspring-DEMO-ceraroundpro-light.otf')
+}
+@font-face {
+  font-family: 'Cera Round Pro';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../src/assets/fonts/Fontspring-DEMO-ceraroundpro-thin.otf')
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Cera Round Pro';
+}
+.container{
+  width: 100%;
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+a{
+  text-decoration: none;
+}
+.section__title{
+  font-family: Cera Round Pro;
+font-size: 48px;
+font-weight: 500;
+line-height: 48px;
+letter-spacing: 0.03em;
+color: $red;
+}
