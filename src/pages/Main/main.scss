@@ -89,3 +89,40 @@ color: #fff;
     background-color: #F8F8F8;
     padding: 120px 0;
 }
+.slide{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+.popular__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popular__slider{
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+}
+.popular__prev,
+.popular__next{
+    width: 40px;
+    height: 40px;
+    border-radius:6px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #242424;
+    cursor: pointer;
+}
+.popular__prev{
+    margin-right: 30px;
+}
+.popular__next{
+    transform: rotate(180deg);
+}
+.popular__prev:hover,
+.popular__next:hover{
+    border: 1px solid $red;
+}
