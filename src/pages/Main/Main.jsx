@@ -9,17 +9,26 @@ import arrowLeft from"../../assets/images/left-arrow.svg"
 import Card from '../../components/Cards/Card';
 import popularImage from "../../assets/images/popular1.jpg"
 import emblem from "../../assets/images/emblem.png"
+import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 export default class Main extends Component {
     constructor(props) {
         super(props);
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
+        this.paginateNext = this.paginateNext.bind(this);
+        this.paginatePrevious = this.paginatePrevious.bind(this);
       }
       next() {
         this.slider.slickNext();
       }
       previous() {
         this.slider.slickPrev();
+      }
+      paginateNext(){
+        this.paginate.slickNext();
+      }
+      paginatePrevious(){
+        this.paginate.slickPrev();
       }
     render() {
         let data=this.props
@@ -38,6 +47,37 @@ export default class Main extends Component {
           slidesToScroll: 1,
           swipeToSlide: true,
           arrows:false
+        };
+        const pagination = {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow:3,
+          slidesToScroll:3,
+          arrows:false,
+          appendDots: dots => (
+            <div
+              style={{
+                backgroundColor: "transparent"
+              }}
+            >
+              <ul className='testimonial__paginate'>
+                <button style={{marginRight:"0px"}} className='popular__prev'onClick={this.paginatePrevious}><img src={arrowLeft} alt="arrow left" /></button>
+                <span className='testimonial__dots'>{dots} </span>
+              <button className='popular__next' onClick={this.paginateNext}><img src={arrowLeft} alt="arrow right" /></button>
+            </ul>
+            </div>
+          ),
+          customPaging: i => (
+            <div
+              style={{
+                width: "30px",
+                height:"30px"
+              }}
+            >
+              {i+1}
+            </div>
+          )
         };
   return (
     <main>
@@ -142,6 +182,58 @@ export default class Main extends Component {
               <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
               </li>
             </ul>
+          </div>
+        </section>
+        <section className="testimonial">
+          <div className="container">
+            <div className="testimonial__header">
+              <span className="testimonial__suptitle">
+              Testimony
+              </span>
+              <h3 className="testimonial__title">
+              Happy customers
+              </h3>
+            </div>
+            <ul className="testimonial__list">
+            <Slider ref={page => (this.paginate = page)} {...pagination}>
+            <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+              <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+              <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+              <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+              <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+              <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+              <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+              <li className="testimonial__item">
+                <TestimonialCard testimonialInfo={["Maria","Я всегда был  самым худым и щуплым ребенком среди своих сверстников. Я всегда мечтал стать как мой кумир и иметь интерес...","06/02/2022","11:15","222"]}/>
+              </li>
+            </Slider>
+            </ul>
+          </div>
+        </section>
+        <section className="news">
+          <div className="container">
+          <div className="testimonial__header">
+              <span className="testimonial__suptitle">
+              News
+              </span>
+              <h3 className="testimonial__title">
+              Gerícht updates
+              </h3>
+            </div>
           </div>
         </section>
     </main>
