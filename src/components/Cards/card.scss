@@ -1,0 +1,30 @@
+@import "../../variables/variables.scss";
+.card{
+    width: 310px;
+    padding: 20px;
+    background-color:#fff;
+    border-radius: 14px;
+}
+.card__img{
+    width:270px;
+    height: 183px;
+    object-fit: cover;
+}
+.card__title{
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 10px;
+    color: $title;
+}
+.card__price{
+    font-family: Open Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+    text-align: center;
+    margin-top: 20px;
+    color: $red;
+}

@@ -86,13 +86,13 @@ color: #fff;
     transform: translateX(-25px);
 }
 .popular{
+    position: relative;
     background-color: #F8F8F8;
     padding: 120px 0;
 }
 .slide{
     width: 50px;
     height: 50px;
-    background-color: red;
 }
 .popular__inner{
     display: flex;
@@ -101,10 +101,9 @@ color: #fff;
 }
 .popular__slider{
     width: 100%;
-    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-    background-color: red;
+    margin-top: 30px;
 }
 .popular__prev,
 .popular__next{
@@ -125,4 +124,44 @@ color: #fff;
 .popular__prev:hover,
 .popular__next:hover{
     border: 1px solid $red;
+}
+.popular__emblem{
+    position: absolute;
+    bottom:-50px;
+    right: 0;
+    z-index: 2;
+}
+.regular{
+    padding: 120px 0;
+    background-color: #fff;
+}
+.regular__list{
+    width: 100%;
+    margin-top: 60px;
+}
+#regular__link{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    min-width:200px;
+    border-color: $red;
+    transition: all .4s;
+    cursor: pointer;
+}
+#regular__link:hover{
+    background-color: $red;
+    color: #fff;
+}
+.regular__foods{
+    display: grid;
+    grid-template-columns: repeat(4,315px);
+    gap: 20px;
+    margin-top: 50px;
+}
+.regular__food{
+    list-style-type: none;
+    border: 1px solid rgba(36, 36, 36, 0.1);
+    border-radius: 14px;
 }

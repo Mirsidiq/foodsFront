@@ -6,6 +6,9 @@ import Button from '../../components/Button/Button'
 import "./main.scss"
 import heroBg from"../../assets/images/main-bg.png"
 import arrowLeft from"../../assets/images/left-arrow.svg"
+import Card from '../../components/Cards/Card';
+import popularImage from "../../assets/images/popular1.jpg"
+import emblem from "../../assets/images/emblem.png"
 export default class Main extends Component {
     constructor(props) {
         super(props);
@@ -23,8 +26,18 @@ export default class Main extends Component {
         const settings = {
           infinite: true,
           speed: 500,
-          slidesToShow: 3,
-          slidesToScroll: 1
+          slidesToShow:4,
+          slidesToScroll:4,
+          arrows:false,
+          swipeToSlide:true
+        };
+        const regularMenu = {
+          infinite: false,
+          speed: 500,
+          slidesToShow:6,
+          slidesToScroll: 1,
+          swipeToSlide: true,
+          arrows:false
         };
   return (
     <main>
@@ -59,15 +72,77 @@ export default class Main extends Component {
             </div>
             <div className='popular__slider'>
             <Slider className="custom" ref={c => (this.slider = c)} {...settings}>
-                <h1>Mrsadas</h1>
-                <h1>Mrsadas</h1>
-
-                <h1>Mrsadas</h1>
-
-                <h1>Mrsadas</h1>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
             </Slider>
             </div>
+            <div className="popular__emblem">
+              <img src={emblem} alt="an emblem" />
             </div>
+            </div>
+        </section>
+        <section className="regular">
+          <div className="container">
+            <h3 className="section__title regular__title">Our Regular Menu Pack</h3>
+            <ul className='regular__list'>
+              <Slider className='regular__slider' {...regularMenu}>
+              <li className="regular__item"><Button id='regular__link'>All</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Shawarma</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Turk Kebab</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Hamburger Kebab</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Doner kebab</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Shish kebab</Button></li>
+              <li className="regular__item"><Button id='regular__link'>French fries Pizza</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Desserts</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Desserts</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Desserts</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Desserts</Button></li>
+              <li className="regular__item"><Button id='regular__link'>Desserts</Button></li>
+              </Slider>
+            </ul>
+            <ul className='regular__foods'>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+              <li className='regular__food'>
+              <Card cardInfo={[popularImage,"Barbecue Shish kebab Shashlik Skewer","$12.00"]}/>
+              </li>
+            </ul>
+          </div>
         </section>
     </main>
   );
