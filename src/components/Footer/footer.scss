@@ -1,0 +1,136 @@
+@import "../../variables/variables.scss";
+.footer-top{
+    position: relative;
+    padding-top: 120px;
+    background-color: #fff;
+    height: 340px !important;
+}
+.footer__container{
+    position: absolute;
+    background-color:$red;
+    border-radius: 20px;
+    border: 1px solid rgba(#fff,.4);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer-top__info{
+    max-width: 900px;
+    margin:0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    text-align: center;
+}
+.footer__suptitle{
+    font-family: Cera Round Pro;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+.footer__title{
+    font-family: Cera Round Pro;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 62px;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+.footer__subtitle{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+.footer__email{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 64px;
+}
+#footer__input{
+    width: 100%;
+    max-width: 635px;
+    height: 52px;
+    background-color: transparent;
+    color: #AAAAAA;
+}
+#footer__send-btn{
+    font-family: Cera Round Pro;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    margin-left: 32px;
+    height: 52px;
+    color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+    transition: all .4s;
+}
+#footer__send-btn:hover{
+    color:#242424;
+    background-color: #fff;
+}
+.footer-bottom{
+    padding-top: 290px;
+    background-color: $red;
+}
+.footer-bottom__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-contact{
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+}
+.footer-contact__title{
+    font-family: 'Cera Round Pro';
+    font-weight: 400;
+    font-size: 32px;
+    line-height:42px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #fff;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+.footer-contact__addres,
+.footer-end{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+.footer-desc{
+    width: 100%;
+    max-width: 438px;
+    text-align: center;
+}
+.footer-desc__text{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+.footer-socials{
+    margin-top: 45px;
+}
+.footer-social+.footer-social{
+    margin-left: 23px;
+}
+#footer-date{
+    margin-top: 10px;
+}
+.footer-end{
+    margin-top: 80px;
+    text-align: center;
+    padding-bottom: 40px;
+}
