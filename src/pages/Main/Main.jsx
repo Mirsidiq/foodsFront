@@ -9,7 +9,10 @@ import arrowLeft from"../../assets/images/left-arrow.svg"
 import Card from '../../components/Cards/Card';
 import popularImage from "../../assets/images/popular1.jpg"
 import emblem from "../../assets/images/emblem.png"
+import newsImg from "../../assets/images/updates.jpg"
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
+import NewsCard from '../../components/newsCard/NewsCard';
+import galleryFood from "../../assets/images/gallery.png"
 export default class Main extends Component {
     constructor(props) {
         super(props);
@@ -78,6 +81,14 @@ export default class Main extends Component {
               {i+1}
             </div>
           )
+        };
+        const gallery = {
+          infinite: false,
+          speed: 500,
+          slidesToShow:3,
+          slidesToScroll: 1,
+          swipeToSlide: true,
+          arrows:false
         };
   return (
     <main>
@@ -233,8 +244,66 @@ export default class Main extends Component {
               <h3 className="testimonial__title">
               Gerícht updates
               </h3>
-            </div>
           </div>
+          <ul className="news__list">
+            <li className='news__item'>
+              <NewsCard newsInfo={[newsImg,"tips for prepping and caring for your grill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.","16 Apr 2021"]}/>
+            </li>
+            <li className='news__item'>
+              <NewsCard newsInfo={[newsImg,"tips for prepping and caring for your grill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.","16 Apr 2021"]}/>
+            </li>
+            <li className='news__item'>
+              <NewsCard newsInfo={[newsImg,"tips for prepping and caring for your grill","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.","16 Apr 2021"]}/>
+            </li>
+          </ul>
+          <div className="news__footer">
+            <Button id="news-view">view more</Button>
+          </div>
+          </div>
+        </section>
+        <section className="gallery">
+            <div className="gallery__inner">
+              <div className="gallery__info">
+              <span className="testimonial__suptitle">
+              Instagram
+              </span>
+              <h3 className="testimonial__title">
+              Photo Gallery
+              </h3>
+              <p className="gallery__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.
+              </p>
+              <Button id="news-view">view more</Button>
+              </div>
+              <ul className='gallery__list'>
+              <Slider {...gallery}>
+                <li className="gallery__item">
+                  <img src={galleryFood} alt="food" />
+                  <span className='gallery__overlay'>
+                    <a href="#" className='gallery__link'>see more</a>
+                  </span>
+                </li>
+                <li className="gallery__item">
+                  <img src={galleryFood} alt="food" />
+                  <span className='gallery__overlay'>
+                    <a href="#" className='gallery__link'>see more</a>
+                  </span>
+                </li>
+                <li className="gallery__item">
+                  <img src={galleryFood} alt="food" />
+                  <span className='gallery__overlay'>
+                    <a href="#" className='gallery__link'>see more</a>
+                  </span>
+                </li>
+                <li className="gallery__item">
+                  <img src={galleryFood} alt="food" />
+                  <span className='gallery__overlay'>
+                    <a href="#" className='gallery__link'>see more</a>
+                  </span>
+                </li>
+              </Slider>
+            </ul>
+            </div>
         </section>
     </main>
   );

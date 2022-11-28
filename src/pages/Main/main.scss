@@ -166,7 +166,8 @@ color: #fff;
     border-radius: 14px;
 }
 .testimonial{
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 170px;
     background-color: #F4F4F4;
 }
 .testimonial__header{
@@ -190,6 +191,7 @@ color: #fff;
     line-height: 62px;
     letter-spacing: 0.03em;
     text-transform: capitalize;
+    color: $red;
 }
 .testimonial__list .slick-dots{
     bottom:-80px;
@@ -221,3 +223,88 @@ color: #fff;
     right:-24px;
     margin: 0 8px;
 }
+.news{
+    padding: 100px 0;
+}
+.news__list{
+    display: grid;
+    grid-template-columns:minmax(300px,410px) minmax(300px,410px) minmax(300px,410px);
+    list-style-type: none;
+    justify-content: space-between;
+}
+.news__footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#news-view{
+    font-family: Cera Round Pro;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    border-color: $red;
+    color:$title;
+    transition: all .4s;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+#news-view:hover{
+    color: #fff;
+    background-color: $red;
+}
+.gallery{
+    padding: 100px 0;
+    background-color: #F4F4F4;
+    padding-left: 10px;
+}
+.gallery__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gallery__info{
+    width: 490px;
+    margin-right: 60px;
+}
+.gallery__text{
+    margin: 24px 0;
+}
+.gallery__list{
+    width:920px;
+}
+.gallery__item{
+    max-width: 300px;
+    position: relative;
+    height:440px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.gallery__item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__overlay{
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    background: linear-gradient(207.55deg, rgba(0, 0, 0, 0.75) 1.5%, rgba(0, 0, 0, 0.64) 98.62%);
+border-radius: 14px;
+height: 0;
+transition: all .4s ease-in-out;
+}
+.gallery__item:hover .gallery__overlay{
+    top: 0;
+    height:99%;
+}
+.gallery__link{
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+
+
